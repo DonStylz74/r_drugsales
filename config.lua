@@ -11,7 +11,7 @@ Cfg = {
     -- |___/\___|_|    \_/ \___|_|
     Server = {
         language = 'en',          -- Determines the language. ('en': English, 'es': Spanish, 'fr': French, 'de': German, 'pt': Portuguese, 'zh': Chinese)
-        notification = 'default', -- Determines the notification system. ('default', 'ox', 'custom': can be customized in bridge/framework/YOURFRAMEWORK)
+        notification = 'ox', -- Determines the notification system. ('default', 'ox', 'custom': can be customized in bridge/framework/YOURFRAMEWORK)
         interaction = 'item',     -- Determines wether opening the trap phone is through an item or command. ('item' or 'command')
         command = 'dealer',       -- Determines the command to open the trap phone. (e.g. 'dealer')
         versionCheck = true,      -- Enables version checking to see if the resource is up to date.
@@ -41,25 +41,33 @@ Cfg = {
         minPolice = 0,                -- Determines the minimum police required to sell drugs.
         streetSales = 'pool',         -- Determines if street sale peds are fetched from the pool or spawned. ('pool' or 'spawn')
         poolDistance = 100,           -- Determines the distance from the player to fetch street sale peds. Would recommend 100.
-        pedFrequency = { 5, 10 },     -- Determines the frequency of ped spawning/fetching in seconds. (min, max)
+        pedFrequency = { 25, 50 },     -- Determines the frequency of ped spawning/fetching in seconds. (min, max)
         rejectChance = 10,            -- Determines the percent chance of a rejected sale. (1-100)
         robberyChance = 10,           -- Determines the percent chance of a robbery attempt, if sale is rejected. (1-100)
-        streetQuantity = { 1, 3 },    -- Determines the quantity of drugs bought by street sale peds. (min, max)
-        bulkQuantity = { 750, 1000 }, -- Determines the quantity of drugs bought by bulk sale peds. (min, max)
-        bulkMeetTime = 10,            -- Determines the time in minutes you have to reach the meetup location.
+        streetQuantity = { 1, 5 },    -- Determines the quantity of drugs bought by street sale peds. (min, max)
+        bulkQuantity = { 5, 75 }, -- Determines the quantity of drugs bought by bulk sale peds. (min, max)
+        bulkMeetTime = 5,            -- Determines the time in minutes you have to reach the meetup location.
         account = 'black_money',      -- Determines the account to deposit money into.
         drugs = {                     -- Determines drugs that can be sold. Add as many as you like.
-            ['weed'] = {              -- Item Name
-                street = { 15, 20 },  -- Street Price (min, max)
-                bulk = { 5, 10 },     -- Bulk Price (min, max)
+            ['ozjar_ak'] = {              -- Item Name
+                street = { 300, 350 },  -- Street Price (min, max)
+                bulk = { 200, 250 },     -- Bulk Price (min, max)
             },
-            ['cocaine'] = {
-                street = { 25, 30 },
-                bulk = { 10, 15 },
+            ['ozjar_ogk'] = {              -- Item Name
+                street = { 350, 400 },  -- Street Price (min, max)
+                bulk = { 250, 300 },     -- Bulk Price (min, max)
             },
-            ['meth'] = {
-                street = { 35, 40 },
-                bulk = { 15, 20 },
+            ['ozjar_ph'] = {              -- Item Name
+                street = { 400, 475 },  -- Street Price (min, max)
+                bulk = { 300, 375 },     -- Bulk Price (min, max)
+            },
+            ['ozjar_sk'] = {              -- Item Name
+                street = { 450, 525 },  -- Street Price (min, max)
+                bulk = { 350, 425 },     -- Bulk Price (min, max)
+            },
+            ['brick_coke'] = {              -- Item Name
+                street = { 1500, 2500 },  -- Street Price (min, max)
+                bulk = { 1000, 1500 },     -- Bulk Price (min, max)
             },
         },
         meetupCoords = { -- Determines the coordinates of the meetup locations on bulk sales.
